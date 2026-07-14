@@ -1,4 +1,4 @@
-import "./technologies.css";
+import "./Technologies.css";
 
 import aiTech from "../assets/aiTech.jpg";
 import cloudTech from "../assets/cloudTech.jpg";
