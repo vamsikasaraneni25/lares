@@ -26,10 +26,47 @@ function Footer() {
           </p>
 
           <div className="social-icons">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaLinkedinIn /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaTwitter /></a>
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/accounts/login/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+
+            {/* Twitter / X */}
+            <a
+              href="https://x.com/i/flow/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </a>
+
           </div>
         </div>
 

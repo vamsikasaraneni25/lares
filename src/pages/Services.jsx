@@ -1,102 +1,83 @@
-import React from "react";
-import PageBanner from "../components/PageBanner";
-import servicesBanner from "../assets/banners/services-banner.png";
+import "./services.css";
 
-import {
-  FaCode,
-  FaCloud,
-  FaMobileAlt,
-  FaLaptopCode,
-  FaDatabase,
-  FaShieldAlt
-} from "react-icons/fa";
-
-import "./Services.css";
+import webService from "../assets/webService.jpg";
+import cloudService from "../assets/cloudService.jpg";
+import mobileService from "../assets/mobileService.jpg";
+import softwareService from "../assets/softwareService.jpg";
+import databaseService from "../assets/databaseService.jpg";
+import cyberService from "../assets/cyberService.jpg";
 
 function Services() {
   const services = [
     {
-      icon: <FaCode />,
+      image: webService,
       title: "Web Development",
       description:
-        "We build modern, responsive, and high-performance websites using the latest technologies."
+        "We build modern, responsive, and high-performance websites using the latest technologies.",
     },
     {
-      icon: <FaCloud />,
+      image: cloudService,
       title: "Cloud Solutions",
       description:
-        "Secure and scalable cloud solutions to improve business efficiency and performance."
+        "Secure and scalable cloud solutions that improve business efficiency and performance.",
     },
     {
-      icon: <FaMobileAlt />,
+      image: mobileService,
       title: "Mobile Application Development",
       description:
-        "Custom mobile applications designed for Android and iOS platforms."
+        "Custom Android and iOS applications designed with intuitive user experiences and seamless performance.",
     },
     {
-      icon: <FaLaptopCode />,
+      image: softwareService,
       title: "Software Development",
       description:
-        "Powerful software solutions developed according to your business requirements."
+        "Powerful software solutions developed according to your business requirements and future growth.",
     },
     {
-      icon: <FaDatabase />,
+      image: databaseService,
       title: "Database Management",
       description:
-        "Reliable database design, management, and optimization services."
+        "Reliable database design, management, optimization, backup, and security services.",
     },
     {
-      icon: <FaShieldAlt />,
+      image: cyberService,
       title: "Cyber Security",
       description:
-        "Protecting your digital assets with secure and advanced security solutions."
-    }
+        "Protecting your digital assets with secure infrastructure and advanced cybersecurity solutions.",
+    },
   ];
 
   return (
-    <>
-      {/* Page Banner */}
-      <PageBanner
-        title="Our Services"
-        image={servicesBanner}
-      />
+    <section className="services">
+      <div className="container">
 
-      {/* Services Section */}
-      <section className="services-section">
+        <h2>Our Services</h2>
 
-        <div className="services-intro">
-          <h2>Our Technology Services</h2>
-          <p>
-            We provide innovative IT solutions that help businesses grow,
-            automate processes, and achieve digital transformation.
-          </p>
-        </div>
+        <p className="services-subtitle">
+          We provide innovative technology solutions that help businesses
+          improve productivity, security, and digital transformation.
+        </p>
 
-
-        <div className="services-container">
-
+        <div className="services-grid">
           {services.map((service, index) => (
             <div className="service-card" key={index}>
 
-              <div className="service-icon">
-                {service.icon}
-              </div>
+              <img
+                src={service.image}
+                alt={service.title}
+                className="service-image"
+              />
 
-              <h3>
-                {service.title}
-              </h3>
+              <h3>{service.title}</h3>
 
-              <p>
-                {service.description}
-              </p>
+              <p>{service.description}</p>
 
             </div>
           ))}
-
         </div>
 
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 

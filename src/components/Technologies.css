@@ -1,34 +1,125 @@
+/* ===========================
+   Technologies Section
+=========================== */
+
 .technologies {
-    padding: 80px;
-    background: white;
+    padding: 100px 8%;
+    background: #f8f9fc;
     text-align: center;
 }
 
+/* Heading */
+
 .technologies h2 {
-    font-size: 40px;
-    color: #0b2d5c;
-    margin-bottom: 50px;
+    font-size: 42px;
+    color: #0B2D5C;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
+
+.tech-subtitle {
+    max-width: 750px;
+    margin: 0 auto 60px;
+    font-size: 18px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ===========================
+   Grid
+=========================== */
 
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
 }
 
+/* ===========================
+   Card
+=========================== */
+
 .tech-card {
-    background: #f5f7fb;
-    padding: 25px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #0b2d5c;
-    box-shadow: 0 5px 12px rgba(0,0,0,.1);
-    transition: all 0.3s ease;
+    background: #fff;
+    border-radius: 18px;
+    padding: 35px 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
 }
 
 .tech-card:hover {
-    background: #0b2d5c;
-    color: white;
-    transform: translateY(-8px);
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* ===========================
+   Image
+=========================== */
+
+.tech-image {
+    width: 180px;
+    height: 120px;
+    object-fit: contain;
+    border-radius:10px;
+
+    display:block;
+    margin: 0 auto 20px;
+    transition: transform 0.4s ease;
+}
+
+.tech-card:hover .tech-image {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* ===========================
+   Title
+=========================== */
+
+.tech-card h3 {
+    color: #0B2D5C;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* ===========================
+   Description
+=========================== */
+
+.tech-card p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+
+    .technologies {
+        padding: 70px 20px;
+    }
+
+    .technologies h2 {
+        font-size: 32px;
+    }
+
+    .tech-subtitle {
+        font-size: 16px;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-card {
+        padding: 30px 20px;
+    }
+
+    .tech-image {
+        width: 80px;
+        height: 80px;
+    }
 }

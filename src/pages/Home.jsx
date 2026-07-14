@@ -1,9 +1,20 @@
 import "./Home.css";
 import Hero from "../components/Hero";
+import Slider from "../components/Slider";
+import aiService from "../assets/ai.jpg";
+import cloudService from "../assets/cloudservice.jpg";
+import iotService from "../assets/iot.jpg";
+import softwareService from "../assets/software.jpg";
+import automationService from "../assets/automationImg.jpg";
+import digitalService from "../assets/digitalTransformationImg.jpg";
 
 function Home() {
   return (
     <>
+    {/* Technology Showcase Slider */}
+      <Slider />
+      
+      {/* Hero Section */}
       <Hero />
 
       {/* About Section */}
@@ -21,57 +32,112 @@ function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="home-services">
-        <div className="container">
-          <h2>Our Core Services</h2>
+     {/* Services Section */}
+<section className="home-services">
+  <div className="container">
 
-          <div className="service-grid">
+    <h2>Our Core Services</h2>
 
-            <div className="service-card">
-              🤖
-              <h3>Artificial Intelligence</h3>
-              <p>Smart AI solutions for modern businesses.</p>
-            </div>
+    <div className="service-grid">
 
-            <div className="service-card">
-              ☁
-              <h3>Cloud Computing</h3>
-              <p>Secure and scalable cloud infrastructure.</p>
-            </div>
+      <div className="service-card">
+        <img
+          src={aiService}
+          alt="Artificial Intelligence"
+          className="home-service-image"
+        />
 
-            <div className="service-card">
-              🌐
-              <h3>Internet of Things</h3>
-              <p>Connected smart devices and automation.</p>
-            </div>
+        <h3>Artificial Intelligence</h3>
 
-            <div className="service-card">
-              💻
-              <h3>Software Development</h3>
-              <p>Custom web and mobile applications.</p>
-            </div>
+        <p>
+          Smart AI solutions that automate processes and improve
+          business decision-making.
+        </p>
+      </div>
 
-            <div className="service-card">
-              ⚙
-              <h3>Automation</h3>
-              <p>Business process automation solutions.</p>
-            </div>
+      <div className="service-card">
+        <img
+          src={cloudService}
+          alt="Cloud Computing"
+          className="home-service-image"
+        />
 
-            <div className="service-card">
-              📊
-              <h3>Digital Transformation</h3>
-              <p>Helping businesses modernize operations.</p>
-            </div>
+        <h3>Cloud Computing</h3>
 
-          </div>
-        </div>
-      </section>
+        <p>
+          Secure, scalable cloud infrastructure designed for modern
+          businesses and enterprises.
+        </p>
+      </div>
+
+      <div className="service-card">
+        <img
+          src={iotService}
+          alt="Internet of Things"
+          className="home-service-image"
+        />
+
+        <h3>Internet of Things</h3>
+
+        <p>
+          Connecting smart devices to create intelligent and efficient
+          digital ecosystems.
+        </p>
+      </div>
+
+      <div className="service-card">
+        <img
+          src={softwareService}
+          alt="Software Development"
+          className="home-service-image"
+        />
+
+        <h3>Software Development</h3>
+
+        <p>
+          Custom software solutions built to meet your unique business
+          requirements.
+        </p>
+      </div>
+
+      <div className="service-card">
+        <img
+          src={automationService}
+          alt="Automation"
+          className="home-service-image"
+        />
+
+        <h3>Automation</h3>
+
+        <p>
+          Streamline workflows and reduce manual effort with intelligent
+          automation solutions.
+        </p>
+      </div>
+
+      <div className="service-card">
+        <img
+          src={digitalService}
+          alt="Digital Transformation"
+          className="home-service-image"
+        />
+
+        <h3>Digital Transformation</h3>
+
+        <p>
+          Modernize your business with innovative technologies that
+          accelerate digital growth.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* Why Choose Us Section */}
       <section className="why-choose">
         <div className="container">
-
           <h2>Why Choose Us</h2>
 
           <p className="subtitle">
@@ -80,7 +146,6 @@ function Home() {
           </p>
 
           <div className="choose-grid">
-
             <div className="choose-card">
               <div className="choose-icon">💡</div>
               <h3>Innovation</h3>
@@ -94,8 +159,8 @@ function Home() {
               <div className="choose-icon">👨‍💻</div>
               <h3>Experienced Team</h3>
               <p>
-                Our skilled professionals ensure quality,
-                reliability, and timely project delivery.
+                Our skilled professionals ensure quality, reliability,
+                and timely project delivery.
               </p>
             </div>
 
@@ -116,12 +181,9 @@ function Home() {
                 to keep your business running smoothly.
               </p>
             </div>
-
           </div>
-
         </div>
       </section>
-
     </>
   );
 }

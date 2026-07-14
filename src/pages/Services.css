@@ -1,222 +1,127 @@
-/* ================================
-   Services Page
-================================ */
+/* ===========================
+   Services Section
+=========================== */
 
-.services-section {
-  padding: 80px 8%;
-  background: #f8fafc;
+.services {
+    padding: 100px 8%;
+    background: #f8f9fc;
+    text-align: center;
 }
 
-
-/* ================================
-   Introduction Section
-================================ */
-
-.services-intro {
-  text-align: center;
-  max-width: 850px;
-  margin: 0 auto 50px;
+.services .container{
+    max-width: 1300px;
+    margin: auto;
 }
 
-.services-intro h2 {
-  font-size: 38px;
-  color: #0b1f3a;
-  margin-bottom: 15px;
-  font-weight: 700;
+/* ===========================
+   Heading
+=========================== */
+
+.services h2 {
+    font-size: 42px;
+    color: #0B2D5C;
+    margin-bottom: 15px;
 }
 
-.services-intro p {
-  font-size: 18px;
-  color: #555;
-  line-height: 1.7;
+.services-subtitle {
+    max-width: 750px;
+    margin: 0 auto 60px;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
+/* ===========================
+   Grid (3 Columns)
+=========================== */
 
-/* ================================
-   Services Cards Container
-================================ */
-
-.services-container {
-
-  display: grid;
-
-  grid-template-columns:
-  repeat(3, 1fr);
-
-  gap: 30px;
-
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
 }
 
+/* ===========================
+   Card
+=========================== */
 
-/* ================================
-   Service Card
-================================ */
-
-.service-card {
-
-  background: white;
-
-  padding: 35px 25px;
-
-  text-align: center;
-
-  border-radius: 12px;
-
-  box-shadow:
-  0 10px 25px rgba(0,0,0,0.08);
-
-  transition:
-  all 0.3s ease;
-
-  border-bottom:
-  4px solid transparent;
-
+.service-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px 25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-
-/* Card Hover Effect */
-
-.service-card:hover {
-
-  transform: translateY(-10px);
-
-  border-bottom:
-  4px solid #007bff;
-
-  box-shadow:
-  0 15px 35px rgba(0,0,0,0.15);
-
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
 }
 
+/* ===========================
+   Image
+=========================== */
 
-/* ================================
-   Service Icon
-================================ */
-
-.service-icon {
-
-  width: 75px;
-
-  height: 75px;
-
-  margin: 0 auto 20px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  background:
-  linear-gradient(
-    135deg,
-    #007bff,
-    #00c6ff
-  );
-
-  color: white;
-
-  font-size: 32px;
-
-  border-radius: 50%;
-
+.service-image{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:20px;
 }
 
+/* ===========================
+   Title
+=========================== */
 
-/* ================================
-   Card Heading
-================================ */
-
-.service-card h3 {
-
-  font-size: 22px;
-
-  color: #0b1f3a;
-
-  margin-bottom: 15px;
-
-}
-
-
-/* ================================
-   Card Description
-================================ */
-
-.service-card p {
-
-  font-size: 16px;
-
-  color: #666;
-
-  line-height: 1.6;
-
-}
-
-
-/* ================================
-   Responsive Design
-================================ */
-
-
-/* Tablet */
-
-@media(max-width: 992px){
-
-  .services-container{
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-  }
-
-
-  .services-intro h2{
-
-    font-size:32px;
-
-  }
-
-}
-
-
-/* Mobile */
-
-@media(max-width: 600px){
-
-  .services-section{
-
-    padding:
-    60px 5%;
-
-  }
-
-
-  .services-container{
-
-    grid-template-columns:
-    1fr;
-
-  }
-
-
-  .services-intro h2{
-
+.service-card h3{
     font-size:28px;
+    color:#0B2D5C;
+    margin-bottom:15px;
+}
 
-  }
+/* ===========================
+   Description
+=========================== */
 
-
-  .services-intro p{
-
+.service-card p{
+    color:#666;
+    line-height:1.8;
     font-size:16px;
+}
 
-  }
+/* ===========================
+   Tablet
+=========================== */
 
+@media(max-width:992px){
 
-  .service-card{
+.services-grid{
+    grid-template-columns:repeat(2,1fr);
+}
 
-    padding:30px 20px;
+}
 
-  }
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.services{
+    padding:70px 20px;
+}
+
+.services-grid{
+    grid-template-columns:1fr;
+}
+
+.services h2{
+    font-size:32px;
+}
+
+.service-card h3{
+    font-size:24px;
+}
 
 }
