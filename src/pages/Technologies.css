@@ -1,0 +1,276 @@
+/* ================================
+   Technologies Page
+================================ */
+
+.technologies-section {
+
+  padding: 80px 8%;
+
+  background: #f8fafc;
+
+}
+
+
+
+/* ================================
+   Introduction Section
+================================ */
+
+.technologies-intro {
+
+  text-align: center;
+
+  max-width: 850px;
+
+  margin: 0 auto 50px;
+
+}
+
+
+.technologies-intro h2 {
+
+  font-size: 38px;
+
+  color: #0b1f3a;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+
+}
+
+
+.technologies-intro p {
+
+  font-size: 18px;
+
+  color: #555;
+
+  line-height: 1.7;
+
+}
+
+
+
+/* ================================
+   Technologies Container
+================================ */
+
+.technologies-container {
+
+  display: grid;
+
+  grid-template-columns:
+
+  repeat(3, 1fr);
+
+  gap: 30px;
+
+}
+
+
+
+/* ================================
+   Technology Card
+================================ */
+
+.technology-card {
+
+  background: white;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  border-radius: 12px;
+
+
+  box-shadow:
+
+  0 10px 25px rgba(0,0,0,0.08);
+
+
+  transition:
+
+  all 0.3s ease;
+
+
+  border-bottom:
+
+  4px solid transparent;
+
+}
+
+
+
+/* Hover Effect */
+
+.technology-card:hover {
+
+  transform: translateY(-10px);
+
+
+  border-bottom:
+
+  4px solid #007bff;
+
+
+  box-shadow:
+
+  0 15px 35px rgba(0,0,0,0.15);
+
+}
+
+
+
+/* ================================
+   Technology Icon
+================================ */
+
+.technology-icon {
+
+  width: 75px;
+
+  height: 75px;
+
+
+  margin: 0 auto 20px;
+
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+
+  background:
+
+  linear-gradient(
+
+    135deg,
+
+    #007bff,
+
+    #00c6ff
+
+  );
+
+
+  color: white;
+
+
+  font-size: 32px;
+
+
+  border-radius: 50%;
+
+}
+
+
+
+/* ================================
+   Technology Title
+================================ */
+
+.technology-card h3 {
+
+  font-size: 22px;
+
+  color: #0b1f3a;
+
+  margin-bottom: 15px;
+
+}
+
+
+
+/* ================================
+   Technology Description
+================================ */
+
+.technology-card p {
+
+  font-size: 16px;
+
+  color: #666;
+
+  line-height: 1.6;
+
+}
+
+
+
+/* ================================
+   Responsive Design
+================================ */
+
+
+/* Tablet */
+
+@media(max-width: 992px) {
+
+
+  .technologies-container {
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+  }
+
+
+  .technologies-intro h2 {
+
+    font-size: 32px;
+
+  }
+
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width: 600px) {
+
+
+  .technologies-section {
+
+    padding: 60px 5%;
+
+  }
+
+
+  .technologies-container {
+
+    grid-template-columns:
+
+    1fr;
+
+  }
+
+
+  .technologies-intro h2 {
+
+    font-size: 28px;
+
+  }
+
+
+  .technologies-intro p {
+
+    font-size: 16px;
+
+  }
+
+
+  .technology-card {
+
+    padding: 30px 20px;
+
+  }
+
+
+}
