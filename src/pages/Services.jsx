@@ -1,11 +1,11 @@
 import "./services.css";
 
-import webService from "../assets/webService.jpg";
-import cloudService from "../assets/cloudService.jpg";
-import mobileService from "../assets/mobileService.jpg";
-import softwareService from "../assets/softwareService.jpg";
-import databaseService from "../assets/databaseService.jpg";
-import cyberService from "../assets/cyberService.jpg";
+import webService from "../assets/webservice.jpg";
+import cloudService from "../assets/cloudservice.jpg";
+import mobileService from "../assets/mobileservice.jpg";
+import softwareService from "../assets/softwareservice.jpg";
+import databaseService from "../assets/databaseservice.jpg";
+import cyberService from "../assets/cyberservice.jpg";
 
 function Services() {
   const services = [
