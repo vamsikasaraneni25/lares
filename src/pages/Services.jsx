@@ -1,4 +1,4 @@
-import "./services.css";
+import "./Services.css";
 
 import webService from "../assets/webservice.jpg";
 import cloudService from "../assets/cloudservice.jpg";
