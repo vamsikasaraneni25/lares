@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
@@ -80,7 +81,24 @@ function Slider() {
 
                   <p>{slide.description}</p>
 
-                  <button>Learn More</button>
+                  <Link
+  to={
+    index === 0
+      ? "/services/artificial-intelligence"
+      : index === 1
+      ? "/services/cloud-computing"
+      : index === 2
+      ? "/services/iot"
+      : index === 3
+      ? "/services/software-development"
+      : index === 4
+      ? "/services/automation"
+      : "/services/digital-transformation"
+  }
+  className="slider-btn"
+>
+  Learn More
+</Link>
                 </div>
               </div>
             </div>

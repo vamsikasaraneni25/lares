@@ -1,4 +1,5 @@
 import "./Home.css";
+import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Slider from "../components/Slider";
 import aiService from "../assets/ai.jpg";
@@ -7,6 +8,7 @@ import iotService from "../assets/iot.jpg";
 import softwareService from "../assets/software.jpg";
 import automationService from "../assets/automationImg.jpg";
 import digitalService from "../assets/digitalTransformationImg.jpg";
+
 
 function Home() {
   return (
@@ -41,19 +43,26 @@ function Home() {
     <div className="service-grid">
 
       <div className="service-card">
-        <img
-          src={aiService}
-          alt="Artificial Intelligence"
-          className="home-service-image"
-        />
+  <img
+    src={aiService}
+    alt="Artificial Intelligence"
+    className="home-service-image"
+  />
 
-        <h3>Artificial Intelligence</h3>
+  <h3>Artificial Intelligence</h3>
 
-        <p>
-          Smart AI solutions that automate processes and improve
-          business decision-making.
-        </p>
-      </div>
+  <p>
+    Smart AI solutions that automate processes and improve
+    business decision-making.
+  </p>
+
+ <button
+  className="learn-more-btn"
+  onClick={() => console.log("Clicked")}
+>
+  Learn More
+</button>
+</div>
 
       <div className="service-card">
         <img
@@ -68,6 +77,13 @@ function Home() {
           Secure, scalable cloud infrastructure designed for modern
           businesses and enterprises.
         </p>
+
+        <Link
+          to="/services/cloud-computing"
+          className="learn-more-btn"
+        >
+          Learn More
+        </Link>
       </div>
 
       <div className="service-card">
@@ -83,6 +99,12 @@ function Home() {
           Connecting smart devices to create intelligent and efficient
           digital ecosystems.
         </p>
+        <Link
+        to="/services/iot"
+        className="learn-more-btn"
+>
+         Learn More
+         </Link>
       </div>
 
       <div className="service-card">
@@ -98,6 +120,12 @@ function Home() {
           Custom software solutions built to meet your unique business
           requirements.
         </p>
+        <Link
+          to="/services/software-development"
+          className="learn-more-btn"
+        >
+          Learn More
+        </Link>
       </div>
 
       <div className="service-card">
@@ -113,6 +141,12 @@ function Home() {
           Streamline workflows and reduce manual effort with intelligent
           automation solutions.
         </p>
+        <Link
+  to="/services/automation"
+  className="learn-more-btn"
+>
+  Learn More
+</Link>
       </div>
 
       <div className="service-card">
@@ -128,6 +162,12 @@ function Home() {
           Modernize your business with innovative technologies that
           accelerate digital growth.
         </p>
+        <Link
+          to="/services/digital-transformation"
+          className="learn-more-btn"
+        >
+          Learn More
+        </Link>
       </div>
 
     </div>

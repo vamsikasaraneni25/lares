@@ -1,179 +1,113 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import PageBanner from "../components/PageBanner";
 import technologiesBanner from "../assets/banners/technologies-banner.png";
 
-import {
-  FaBrain,
-  FaCloud,
-  FaCode,
-  FaMobileAlt,
-  FaShieldAlt,
-  FaServer
-} from "react-icons/fa";
+import aiTech from "../assets/aiTech.jpg";
+import cloudTech from "../assets/cloudTech.jpg";
+import webTech from "../assets/webTech.jpg";
+import mobileTech from "../assets/mobileTech.jpg";
+import cybersecurityTech from "../assets/cybersecurityTech.jpg";
+import devopsTech from "../assets/devopsTech.jpg";
 
 import "./Technologies.css";
 
-
 function Technologies() {
-
-
   const technologies = [
-
     {
-      icon: <FaBrain />,
+      image: aiTech,
       title: "Artificial Intelligence",
       description:
-        "Building intelligent solutions using AI and machine learning technologies to automate and improve business processes."
+        "Building intelligent solutions using AI and Machine Learning to automate business processes and improve decision-making.",
+      link: "/technologies/artificial-intelligence",
     },
 
-
     {
-      icon: <FaCloud />,
+      image: cloudTech,
       title: "Cloud Computing",
       description:
-        "Providing secure, scalable, and flexible cloud solutions for modern digital businesses."
+        "Providing secure, scalable cloud infrastructure and services for modern businesses.",
+      link: "/technologies/cloud-computing",
     },
 
-
     {
-      icon: <FaCode />,
+      image: webTech,
       title: "Web Technologies",
       description:
-        "Developing fast and responsive applications using modern frontend and backend technologies."
+        "Developing responsive, secure, and high-performance web applications using modern technologies.",
+      link: "/technologies/web-technologies",
     },
 
-
     {
-      icon: <FaMobileAlt />,
+      image: mobileTech,
       title: "Mobile Technologies",
       description:
-        "Creating powerful mobile applications with smooth user experience across Android and iOS platforms."
+        "Creating Android and iOS applications with outstanding user experiences.",
+      link: "/technologies/mobile-technologies",
     },
 
-
     {
-      icon: <FaShieldAlt />,
+      image: cybersecurityTech,
       title: "Cyber Security",
       description:
-        "Implementing advanced security practices to protect applications, networks, and valuable business data."
+        "Protecting applications, networks, and sensitive business data with advanced security practices.",
+      link: "/technologies/cyber-security",
     },
 
-
     {
-      icon: <FaServer />,
+      image: devopsTech,
       title: "DevOps & Infrastructure",
       description:
-        "Automating deployment and managing reliable IT infrastructure with modern DevOps practices."
-    }
-
+        "Automating deployment pipelines and managing reliable cloud infrastructure.",
+      link: "/technologies/devops-infrastructure",
+    },
   ];
 
-
-
   return (
-
     <>
-
-
-      {/* Page Banner */}
-
       <PageBanner
         title="Technologies"
         image={technologiesBanner}
       />
 
-
-
-      {/* Technologies Section */}
-
-
       <section className="technologies-section">
-
-
-
         <div className="technologies-intro">
-
-
-          <h2>
-            Technologies We Use
-          </h2>
-
+          <h2>Technologies We Use</h2>
 
           <p>
-            We use modern and advanced technologies to create
-            secure, scalable, and innovative digital solutions
-            for businesses.
+            We leverage modern technologies to build secure, scalable,
+            and innovative digital solutions for businesses across
+            multiple industries.
           </p>
-
-
         </div>
-
-
-
-
 
         <div className="technologies-container">
+          {technologies.map((technology, index) => (
+            <div
+              className="technology-card"
+              key={index}
+            >
+              <img
+                src={technology.image}
+                alt={technology.title}
+                className="technology-image"
+              />
 
+              <h3>{technology.title}</h3>
 
-          {
-            technologies.map((technology, index) => (
+              <p>{technology.description}</p>
 
-
-              <div
-                className="technology-card"
-                key={index}
+              <Link
+                to={technology.link}
+                className="technology-btn"
               >
-
-
-
-                <div className="technology-icon">
-
-                  {technology.icon}
-
-                </div>
-
-
-
-
-                <h3>
-
-                  {technology.title}
-
-                </h3>
-
-
-
-
-                <p>
-
-                  {technology.description}
-
-                </p>
-
-
-
-              </div>
-
-
-            ))
-          }
-
-
-
+                Read More
+              </Link>
+            </div>
+          ))}
         </div>
-
-
-
-
       </section>
-
-
-
     </>
-
   );
-
 }
-
 
 export default Technologies;

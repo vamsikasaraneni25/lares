@@ -1,0 +1,213 @@
+/* ===========================
+   Hero Banner
+=========================== */
+
+.technology-hero{
+    position:relative;
+    height:420px;
+    overflow:hidden;
+}
+
+.technology-banner{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.technology-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:#fff;
+}
+
+.technology-overlay h1{
+    color:#fff;
+    font-size:52px;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.technology-overlay p{
+    font-size:22px;
+    max-width:800px;
+    color:#f2f2f2;
+}
+
+/* ===========================
+   Content
+=========================== */
+
+.technology-content{
+    padding:80px 0;
+    background:#f8f9fc;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.technology-content h2{
+    color:#0B2D5C;
+    font-size:34px;
+    margin-bottom:20px;
+    margin-top:50px;
+}
+
+.technology-content p{
+    color:#666;
+    font-size:18px;
+    line-height:1.9;
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+.technology-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-top:30px;
+}
+
+.technology-box{
+
+    background:#fff;
+
+    padding:22px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    font-weight:600;
+
+    color:#0B2D5C;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.technology-box:hover{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    transform:translateY(-8px);
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.technology-cta{
+
+    margin-top:70px;
+
+    text-align:center;
+
+    background:#fff;
+
+    padding:60px 40px;
+
+    border-radius:16px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.technology-cta h2{
+
+    margin-top:0;
+
+    margin-bottom:20px;
+}
+
+.technology-cta p{
+
+    max-width:800px;
+
+    margin:auto auto 35px;
+}
+
+.technology-cta button{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    border:none;
+
+    padding:15px 40px;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.technology-cta button:hover{
+
+    background:#0B2D5C;
+
+    transform:translateY(-3px);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .technology-hero{
+        height:320px;
+    }
+
+    .technology-overlay h1{
+        font-size:36px;
+    }
+
+    .technology-overlay p{
+        font-size:18px;
+        padding:0 20px;
+    }
+
+    .technology-content{
+        padding:60px 0;
+    }
+
+    .technology-content h2{
+        font-size:28px;
+    }
+
+    .technology-content p{
+        font-size:16px;
+    }
+
+    .technology-cta{
+        padding:40px 20px;
+    }
+
+    .technology-cta button{
+        width:100%;
+    }
+}
