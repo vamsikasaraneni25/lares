@@ -1,17 +1,27 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import "./PageBanner.css";
 
 function PageBanner({ title, image }) {
   return (
     <section
       className="page-banner"
-      style={{ backgroundImage: `url(${image})` }}
+      style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url(${image})`,
+      }}
     >
-      <div className="overlay">
+      <div className="page-banner-content">
         <h1>{title}</h1>
 
-        <p>
-          Home <span>›</span> {title}
-        </p>
+        <div className="breadcrumb">
+          <Link to="/" className="breadcrumb-home">
+            Home
+          </Link>
+
+          <span className="separator">›</span>
+
+          <span>{title}</span>
+        </div>
       </div>
     </section>
   );

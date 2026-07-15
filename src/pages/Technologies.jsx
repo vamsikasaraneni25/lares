@@ -20,7 +20,6 @@ function Technologies() {
         "Building intelligent solutions using AI and Machine Learning to automate business processes and improve decision-making.",
       link: "/technologies/artificial-intelligence",
     },
-
     {
       image: cloudTech,
       title: "Cloud Computing",
@@ -28,7 +27,6 @@ function Technologies() {
         "Providing secure, scalable cloud infrastructure and services for modern businesses.",
       link: "/technologies/cloud-computing",
     },
-
     {
       image: webTech,
       title: "Web Technologies",
@@ -36,7 +34,6 @@ function Technologies() {
         "Developing responsive, secure, and high-performance web applications using modern technologies.",
       link: "/technologies/web-technologies",
     },
-
     {
       image: mobileTech,
       title: "Mobile Technologies",
@@ -44,7 +41,6 @@ function Technologies() {
         "Creating Android and iOS applications with outstanding user experiences.",
       link: "/technologies/mobile-technologies",
     },
-
     {
       image: cybersecurityTech,
       title: "Cyber Security",
@@ -52,7 +48,6 @@ function Technologies() {
         "Protecting applications, networks, and sensitive business data with advanced security practices.",
       link: "/technologies/cyber-security",
     },
-
     {
       image: devopsTech,
       title: "DevOps & Infrastructure",
@@ -74,34 +69,33 @@ function Technologies() {
           <h2>Technologies We Use</h2>
 
           <p>
-            We leverage modern technologies to build secure, scalable,
-            and innovative digital solutions for businesses across
-            multiple industries.
+            We leverage modern technologies to build secure, scalable, and
+            innovative digital solutions for businesses across multiple
+            industries.
           </p>
         </div>
 
         <div className="technologies-container">
           {technologies.map((technology, index) => (
-            <div
-              className="technology-card"
-              key={index}
-            >
+            <div className="technology-card" key={index}>
               <img
                 src={technology.image}
                 alt={technology.title}
                 className="technology-image"
               />
 
-              <h3>{technology.title}</h3>
+              <div className="technology-content">
+                <h3>{technology.title}</h3>
 
-              <p>{technology.description}</p>
+                <p>{technology.description}</p>
 
-              <Link
-                to={technology.link}
-                className="technology-btn"
-              >
-                Read More
-              </Link>
+                <Link
+                  to={technology.link}
+                  className="technology-btn"
+                >
+                  Read More
+                </Link>
+              </div>
             </div>
           ))}
         </div>

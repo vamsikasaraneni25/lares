@@ -88,16 +88,20 @@
     gap: 30px;
     max-width: 1200px;
     margin: auto;
+    align-items: stretch;
 }
 
 .service-card {
-    background: #fff;
+    background: white;
     border-radius: 16px;
     padding: 25px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0,0,0,.08);
     transition: all .35s ease;
     animation: zoomIn .8s ease;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
@@ -128,6 +132,7 @@
     color: #666;
     line-height: 1.8;
     font-size: 16px;
+    flex-grow: 1;
 }
 
 /* ===========================
@@ -136,22 +141,21 @@
 
 .learn-more-btn {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: auto;
     padding: 12px 28px;
     background: #0B2D5C;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
-    font-size: 15px;
     font-weight: 600;
-    cursor: pointer;
     transition: all .3s ease;
+    align-self: center;
 }
 
 .learn-more-btn:hover {
     background: #0d6efd;
-    transform: translateY(-3px);
     color: #fff;
+    transform: translateY(-3px);
 }
 
 /* ===========================
@@ -218,18 +222,18 @@
    Responsive
 =========================== */
 
-@media (max-width: 992px) {
+@media (max-width:992px) {
 
     .service-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .choose-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
     .home-about h2,
     .home-services h2,
@@ -248,10 +252,5 @@
 
     .home-service-image {
         height: 180px;
-    }
-
-    .learn-more-btn {
-        width: 100%;
-        text-align: center;
     }
 }

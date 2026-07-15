@@ -1,49 +1,56 @@
+import { Link } from "react-router-dom";
 import "./Services.css";
 
-import webService from "../assets/webservice.jpg";
+import aiService from "../assets/ai.jpg";
 import cloudService from "../assets/cloudservice.jpg";
-import mobileService from "../assets/mobileservice.jpg";
-import softwareService from "../assets/softwareservice.jpg";
-import databaseService from "../assets/databaseservice.jpg";
-import cyberService from "../assets/cyberservice.jpg";
+import iotService from "../assets/iot.jpg";
+import softwareService from "../assets/software.jpg";
+import automationService from "../assets/automationImg.jpg";
+import digitalService from "../assets/digitalTransformationImg.jpg";
 
 function Services() {
   const services = [
     {
-      image: webService,
-      title: "Web Development",
+      image: aiService,
+      title: "Artificial Intelligence",
       description:
-        "We build modern, responsive, and high-performance websites using the latest technologies.",
+        "Build intelligent applications using AI, Machine Learning, Natural Language Processing, and Predictive Analytics.",
+      link: "/services/artificial-intelligence",
     },
     {
       image: cloudService,
-      title: "Cloud Solutions",
+      title: "Cloud Computing",
       description:
-        "Secure and scalable cloud solutions that improve business efficiency and performance.",
+        "Secure, scalable cloud infrastructure and migration services for modern businesses.",
+      link: "/services/cloud-computing",
     },
     {
-      image: mobileService,
-      title: "Mobile Application Development",
+      image: iotService,
+      title: "Internet of Things",
       description:
-        "Custom Android and iOS applications designed with intuitive user experiences and seamless performance.",
+        "Connect devices and enable smart automation through IoT technologies and real-time monitoring.",
+      link: "/services/iot",
     },
     {
       image: softwareService,
       title: "Software Development",
       description:
-        "Powerful software solutions developed according to your business requirements and future growth.",
+        "Custom software solutions tailored to your business needs using modern technologies.",
+      link: "/services/software-development",
     },
     {
-      image: databaseService,
-      title: "Database Management",
+      image: automationService,
+      title: "Automation",
       description:
-        "Reliable database design, management, optimization, backup, and security services.",
+        "Automate repetitive tasks and streamline workflows to improve efficiency and productivity.",
+      link: "/services/automation",
     },
     {
-      image: cyberService,
-      title: "Cyber Security",
+      image: digitalService,
+      title: "Digital Transformation",
       description:
-        "Protecting your digital assets with secure infrastructure and advanced cybersecurity solutions.",
+        "Modernize your business with innovative digital technologies that accelerate growth.",
+      link: "/services/digital-transformation",
     },
   ];
 
@@ -55,7 +62,7 @@ function Services() {
 
         <p className="services-subtitle">
           We provide innovative technology solutions that help businesses
-          improve productivity, security, and digital transformation.
+          improve productivity, security, and accelerate digital transformation.
         </p>
 
         <div className="services-grid">
@@ -71,6 +78,13 @@ function Services() {
               <h3>{service.title}</h3>
 
               <p>{service.description}</p>
+
+              <Link
+                to={service.link}
+                className="service-btn"
+              >
+                Read More
+              </Link>
 
             </div>
           ))}
